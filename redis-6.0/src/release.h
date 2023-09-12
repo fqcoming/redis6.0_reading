@@ -1,0 +1,3 @@
+#define REDIS_GIT_SHA1 "5895d119"
+#define REDIS_GIT_DIRTY "87"
+#define REDIS_BUILD_ID "ubuntu-mark-1658223700"

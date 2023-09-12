@@ -1,0 +1,114 @@
+{
+	"files": [
+		{
+			"path": "src/server.h",
+			"bookmarks": [
+				{
+					"line": 664,
+					"column": 16,
+					"label": "redisDb"
+				}
+			]
+		},
+		{
+			"path": "src/dict.c",
+			"bookmarks": [
+				{
+					"line": 134,
+					"column": 11,
+					"label": "缩容"
+				},
+				{
+					"line": 146,
+					"column": 5,
+					"label": "扩容"
+				},
+				{
+					"line": 188,
+					"column": 11,
+					"label": "rehash"
+				},
+				{
+					"line": 243,
+					"column": 17,
+					"label": "一毫秒 rehash"
+				},
+				{
+					"line": 262,
+					"column": 21,
+					"label": "单步 rehash"
+				},
+				{
+					"line": 965,
+					"column": 12,
+					"label": "扩容条件"
+				}
+			]
+		},
+		{
+			"path": "src/server.c",
+			"bookmarks": [
+				{
+					"line": 1424,
+					"column": 12,
+					"label": "缩容条件"
+				},
+				{
+					"line": 1735,
+					"column": 33,
+					"label": "定时器触发 渐进式一毫秒rehash"
+				},
+				{
+					"line": 2827,
+					"column": 12,
+					"label": "初始化 server"
+				},
+				{
+					"line": 2873,
+					"column": 30,
+					"label": "创建事件循环"
+				},
+				{
+					"line": 2978,
+					"column": 22,
+					"label": "创建listenfd的事件"
+				}
+			]
+		},
+		{
+			"path": "src/t_zset.c",
+			"bookmarks": [
+				{
+					"line": 1317,
+					"column": 8,
+					"label": "zset添加节点"
+				}
+			]
+		},
+		{
+			"path": "src/networking.c",
+			"bookmarks": [
+				{
+					"line": 120,
+					"column": 11,
+					"label": "设置clientfd的事件"
+				},
+				{
+					"line": 3076,
+					"column": 12,
+					"label": "io线程池入口函数"
+				}
+			]
+		},
+		{
+			"path": "src/connection.c",
+			"bookmarks": [
+				{
+					"line": 348,
+					"column": 19,
+					"label": "CT_Socket 回调设置"
+				}
+			]
+		}
+	]
+}

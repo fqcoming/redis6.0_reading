@@ -1,0 +1,3223 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+cd src && make all
+ 
+# make[1]: Entering directory '/home/mark/github/redis-6.0/src'
+ 
+# GNU Make 4.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2014 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Aug 18 19:34:55 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# makefile (from 'Makefile', line 32)
+PREFIX = /usr/local
+# automatic
+?F = $(notdir $?)
+# default
+.SHELLFLAGS := -c
+# environment
+VSCODE_AGENT_FOLDER = /home/mark/.vscode-server
+# makefile (from 'Makefile', line 208)
+FINAL_LIBS := ../deps/jemalloc/lib/libjemalloc.a -lm -ldl -pthread -lrt
+# makefile (from 'Makefile', line 243)
+QUIET_INSTALL = @printf '    %b %b\n' $(LINKCOLOR)INSTALL$(ENDCOLOR) $(BINCOLOR)$@$(ENDCOLOR) 1>&2;
+# makefile (from 'Makefile', line 253)
+REDIS_CHECK_RDB_NAME = redis-check-rdb$(PROG_SUFFIX)
+# makefile (from '.make-settings', line 9)
+REDIS_CFLAGS = 
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# default
+MAKE_VERSION := 4.1
+# makefile
+CURDIR := /home/mark/github/redis-6.0/src
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"cc0490d1397af23dc5bf44a96fe15dbb.zh-cn","_translationsConfigFile":"/home/mark/.vscode-server/data/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/tcf.json","_cacheRoot":"/home/mark/.vscode-server/data/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn","_resolvedLanguagePackCoreLocation":"/home/mark/.vscode-server/data/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/e4503b30fc78200f846c62cf8091b76ff5547662","_corruptedFile":"/home/mark/.vscode-server/data/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/corrupted.info","_languagePackSupport":true}
+# environment
+_ = /home/mark/.vscode-server/bin/e4503b30fc78200f846c62cf8091b76ff5547662/node
+# makefile (from 'Makefile', line 18)
+OPTIMIZATION = -O2
+# makefile (from '.make-settings', line 7)
+CFLAGS = 
+# makefile (from '.make-settings', line 11)
+PREV_FINAL_CFLAGS = -std=c11 -pedantic -DREDIS_STATIC= -Wall -W -Wno-missing-field-initializers -O2 -g -ggdb -I../deps/hiredis -I../deps/linenoise -I../deps/lua/src -DUSE_JEMALLOC -I../deps/jemalloc/include
+# makefile (from 'mt19937-64.d', line 1)
+MAKEFILE_LIST :=  Makefile .make-settings Makefile.dep adlist.d quicklist.d ae.d anet.d dict.d server.d sds.d zmalloc.d lzf_c.d lzf_d.d pqsort.d zipmap.d sha1.d ziplist.d release.d networking.d util.d object.d db.d replication.d rdb.d t_string.d t_list.d t_set.d t_zset.d t_hash.d config.d aof.d pubsub.d multi.d debug.d sort.d intset.d syncio.d cluster.d crc16.d endianconv.d slowlog.d scripting.d bio.d rio.d rand.d memtest.d crcspeed.d crc64.d bitops.d sentinel.d notify.d setproctitle.d blocked.d hyperloglog.d latency.d sparkline.d redis-check-rdb.d redis-check-aof.d geo.d lazyfree.d module.d evict.d expire.d geohash.d geohash_helper.d childinfo.d defrag.d siphash.d rax.d t_stream.d listpack.d localtime.d lolwut.d lolwut5.d lolwut6.d acl.d gopher.d tracking.d connection.d tls.d sha256.d timeout.d setcpuaffinity.d mt19937-64.d anet.d adlist.d dict.d redis-cli.d zmalloc.d release.d ae.d crcspeed.d crc64.d siphash.d crc16.d mt19937-64.d ae.d anet.d redis-benchmark.d adlist.d dict.d zmalloc.d siphash.d mt19937-64.d
+# makefile (from 'Makefile', line 20)
+NODEPS := clean distclean
+# makefile (from 'Makefile', line 238)
+ENDCOLOR = "\033[0m"
+# makefile (from 'Makefile', line 34)
+INSTALL = install
+# makefile (from 'Makefile', line 79)
+DEBUG = -g -ggdb
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# makefile (from 'Makefile', line 35)
+PKG_CONFIG = pkg-config
+# makefile (from 'Makefile', line 176)
+LIBSYSTEMD_PKGCONFIG := 
+ 
+# environment
+VSCODE_CWD = /home/mark
+# environment
+SSH_CONNECTION = 192.168.31.13 23628 192.168.31.91 22
+# makefile (from 'Makefile', line 254)
+REDIS_CHECK_AOF_NAME = redis-check-aof$(PROG_SUFFIX)
+# environment
+PATH = /home/mark/.vscode-server/bin/e4503b30fc78200f846c62cf8091b76ff5547662/bin/remote-cli:/usr/local/openresty/bin:/home/mark/.tiup/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# makefile (from 'Makefile', line 327)
+DEP = $(REDIS_SERVER_OBJ:%.o=%.d) $(REDIS_CLI_OBJ:%.o=%.d) $(REDIS_BENCHMARK_OBJ:%.o=%.d)
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# makefile (from 'Makefile', line 248)
+REDIS_SERVER_OBJ = adlist.o quicklist.o ae.o anet.o dict.o server.o sds.o zmalloc.o lzf_c.o lzf_d.o pqsort.o zipmap.o sha1.o ziplist.o release.o networking.o util.o object.o db.o replication.o rdb.o t_string.o t_list.o t_set.o t_zset.o t_hash.o config.o aof.o pubsub.o multi.o debug.o sort.o intset.o syncio.o cluster.o crc16.o endianconv.o slowlog.o scripting.o bio.o rio.o rand.o memtest.o crcspeed.o crc64.o bitops.o sentinel.o notify.o setproctitle.o blocked.o hyperloglog.o latency.o sparkline.o redis-check-rdb.o redis-check-aof.o geo.o lazyfree.o module.o evict.o expire.o geohash.o geohash_helper.o childinfo.o defrag.o siphash.o rax.o t_stream.o listpack.o localtime.o lolwut.o lolwut5.o lolwut6.o acl.o gopher.o tracking.o connection.o tls.o sha256.o timeout.o setcpuaffinity.o mt19937-64.o
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'Makefile', line 206)
+DEPENDENCY_TARGETS = hiredis linenoise lua jemalloc
+# makefile (from 'Makefile', line 250)
+ 
+REDIS_CLI_OBJ = anet.o adlist.o dict.o redis-cli.o zmalloc.o release.o ae.o crcspeed.o crc64.o siphash.o crc16.o mt19937-64.o
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from '.make-settings', line 8)
+LDFLAGS = 
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 15)
+release_hdr := #define REDIS_GIT_SHA1 "5895d119" #define REDIS_GIT_DIRTY "87"
+# environment
+LS_COLORS = 
+# automatic
+%F = $(notdir $%)
+# makefile (from '.make-settings', line 6)
+USE_SYSTEMD = 
+# makefile (from 'Makefile', line 172)
+BUILD_WITH_SYSTEMD = no
+# makefile (from '.make-settings', line 3)
+OPT = -O2
+# makefile (from 'Makefile', line 237)
+MAKECOLOR = "\033[32;1m"
+# environment
+PWD = /home/mark/github/redis-6.0/src
+# makefile (from 'Makefile', line 233)
+CCCOLOR = "\033[34m"
+# environment
+VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-e54a2421-c2ca-4e57-9d2d-e5b6ffb7566a.sock
+# makefile (from 'Makefile', line 16)
+uname_S := Linux
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# makefile (from 'Makefile', line 242)
+QUIET_LINK = @printf '    %b %b\n' $(LINKCOLOR)LINK$(ENDCOLOR) $(BINCOLOR)$@$(ENDCOLOR) 1>&2;
+# makefile (from 'Makefile', line 230)
+REDIS_LD = $(QUIET_LINK)$(CC) $(FINAL_LDFLAGS)
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/mark
+# makefile (from 'Makefile', line 156)
+FINAL_LDFLAGS = $(LDFLAGS) $(REDIS_LDFLAGS) $(DEBUG) -rdynamic
+# makefile (from '.make-settings', line 2)
+WARN = -Wall -W -Wno-missing-field-initializers
+# environment
+LOGNAME = mark
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
++F = $(notdir $+)
+# makefile (from 'Makefile', line 33)
+INSTALL_BIN = $(PREFIX)/bin
+# environment
+ZSH = /home/mark/.oh-my-zsh
+# makefile (from 'Makefile', line 246)
+REDIS_SERVER_NAME = redis-server$(PROG_SUFFIX)
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile (from 'Makefile', line 229)
+REDIS_CC = $(QUIET_CC)$(CC) $(FINAL_CFLAGS)
+# environment
+MAKELEVEL := 1
+# makefile (from '.make-settings', line 10)
+REDIS_LDFLAGS = 
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# makefile (from 'Makefile', line 249)
+REDIS_CLI_NAME = redis-cli$(PROG_SUFFIX)
+# environment
+XDG_SESSION_ID = 219
+# environment
+USER = mark
+# makefile (from 'Makefile', line 241)
+QUIET_CC = @printf '    %b %b\n' $(CCCOLOR)CC$(ENDCOLOR) $(SRCCOLOR)$@$(ENDCOLOR) 1>&2;
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from '.make-settings', line 12)
+PREV_FINAL_LDFLAGS = -g -ggdb -rdynamic
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := make
+# makefile (from '.make-settings', line 1)
+STD = -std=c11 -pedantic -DREDIS_STATIC=
+# environment
+OLDPWD = /home/mark/github/redis-6.0
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# makefile (from 'Makefile', line 17)
+uname_M := x86_64
+# makefile
+MAKEFLAGS = pqrRw
+# environment
+MFLAGS = -pqrRw
+# environment
+SSH_CLIENT = 192.168.31.13 23628 22
+# environment
+MAIL = /var/mail/mark
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+BROWSER = /home/mark/.vscode-server/bin/e4503b30fc78200f846c62cf8091b76ff5547662/bin/helpers/browser.sh
+# environment
+VSCODE_HANDLES_SIGPIPE = true
+# makefile (from 'Makefile', line 252)
+REDIS_BENCHMARK_OBJ = ae.o anet.o redis-benchmark.o adlist.o dict.o zmalloc.o siphash.o mt19937-64.o
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# makefile (from 'Makefile', line 247)
+REDIS_SENTINEL_NAME = redis-sentinel$(PROG_SUFFIX)
+# makefile (from '.make-settings', line 4)
+MALLOC = jemalloc
+# makefile (from 'Makefile', line 251)
+REDIS_BENCHMARK_NAME = redis-benchmark$(PROG_SUFFIX)
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# makefile (from 'Makefile', line 231)
+REDIS_INSTALL = $(QUIET_INSTALL)$(INSTALL)
+# makefile (from 'Makefile', line 235)
+SRCCOLOR = "\033[33m"
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# makefile (from '.make-settings', line 5)
+BUILD_TLS = 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# default
+.RECIPEPREFIX := 
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+LANG = C
+# makefile (from 'Makefile', line 234)
+LINKCOLOR = "\033[34;1m"
+# makefile (from 'Makefile', line 207)
+FINAL_CFLAGS = $(STD) $(WARN) $(OPT) $(DEBUG) $(CFLAGS) $(REDIS_CFLAGS) -I../deps/hiredis -I../deps/linenoise -I../deps/lua/src -DUSE_JEMALLOC -I../deps/jemalloc/include
+# makefile (from 'Makefile', line 236)
+BINCOLOR = "\033[37;1m"
+# variable set hash-table stats:
+# Load=115/1024=11%, Rehash=0, Collisions=20/476=4%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 64768, inode 931004): 335 files, no impossibilities.
+
+# 335 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+%.o: %.c .make-prerequisites
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+# Not a target:
+defrag.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:14.611794904
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ 
+bio.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.524828037
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lzf_c.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.548828008
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+replication.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:38:59.99546263
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+mt19937-64.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.434725129
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+zipmap.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.59682795
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../deps/hiredis/read.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.460828115
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+networking.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:38:58.059417982
+#  File has been updated.
+#  Successfully updated.
+
+t_set.o: t_set.c .make-prerequisites t_set.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h t_set.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 't_set'
+#  Last modified 2022-07-19 17:39:01.947507495
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+debug.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:05.235582721
+#  File has been updated.
+#  Successfully updated.
+
+ 
+# Not a target:
+sort.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:05.487588467
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+rio.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.442724985
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+geo.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:11.83973253
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+rax.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.434725129
+#  File has been updated.
+#  Successfully updated.
+
+aof.o: aof.c .make-prerequisites aof.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h bio.h aof.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h bio.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'aof'
+#  Last modified 2022-07-19 17:39:04.415563998
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+src/help.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 390):
+	@../utils/generate-command-help.rb > help.h
+
+rand.o: rand.c .make-prerequisites rand.c rand.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'rand'
+#  Last modified 2022-07-19 17:39:08.399654707
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+module.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:13.495769827
+#  File has been updated.
+#  Successfully updated.
+
+lzf_c.o: lzf_c.c .make-prerequisites lzf_c.c lzfP.h lzf_c.c lzfP.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lzf_c'
+#  Last modified 2022-07-19 17:38:56.343378281
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+sha256.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.584827965
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+quicklist.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.560827994
+#  File has been updated.
+#  Successfully updated.
+
+bench: redis-benchmark
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 369):
+	./$(REDIS_BENCHMARK_NAME)
+
+# Not a target:
+t_list.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.58882796
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+version.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.59682795
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+bitops.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.524828037
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+release.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:41:40.594695024
+#  File has been updated.
+#  Successfully updated.
+
+setcpuaffinity.o: setcpuaffinity.c .make-prerequisites setcpuaffinity.c config.h setcpuaffinity.c config.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'setcpuaffinity'
+#  Last modified 2022-07-19 17:39:18.13987386
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+ae_evport.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+rdb.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:00.90748361
+#  File has been updated.
+#  Successfully updated.
+
+all: redis-server redis-sentinel redis-cli redis-benchmark redis-check-rdb redis-check-aof
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+ 
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := redis-server redis-sentinel redis-cli redis-benchmark redis-check-rdb redis-check-aof
+# automatic
+# | := 
+# automatic
+# < := redis-server
+# automatic
+# ^ := redis-server redis-sentinel redis-cli redis-benchmark redis-check-rdb redis-check-aof
+# automatic
+# ? := redis-server redis-sentinel redis-cli redis-benchmark redis-check-rdb redis-check-aof
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
+#  recipe to execute (from 'Makefile', line 257):
+	@echo ""
+	@echo "Hint: It's a good idea to run 'make test' ;)"
+	@echo ""
+
+bio.o: bio.c .make-prerequisites bio.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h bio.h bio.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h bio.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'bio'
+#  Last modified 2022-07-19 17:39:08.163649354
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+setproctitle.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:10.291697568
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+notify.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:10.203695578
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+endianconv.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.540828018
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+geohash.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.422725346
+#  File has been updated.
+#  Successfully updated.
+
+sha256.o: sha256.c .make-prerequisites sha256.c sha256.h sha256.c sha256.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'sha256'
+#  Last modified 2022-07-19 17:39:17.935869309
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+anet.o: anet.c .make-prerequisites anet.c fmacros.h anet.h anet.c fmacros.h anet.h anet.c fmacros.h anet.h anet.c fmacros.h anet.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'anet'
+#  Last modified 2022-07-19 17:33:20.12334625
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+crc64.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:08.707661695
+#  File has been updated.
+#  Successfully updated.
+
+ae_kqueue.o: ae_kqueue.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lolwut5.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+childinfo.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:14.26778718
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+siphash.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:14.703796969
+#  File has been updated.
+#  Successfully updated.
+
+test-sds: sds.c sds.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 363):
+	$(REDIS_CC) sds.c zmalloc.c -DSDS_TEST_MAIN $(FINAL_LIBS) -o /tmp/sds_test
+	/tmp/sds_test
+
+.PHONY: all persist-settings clean distclean lcov
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+asciilogo.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.524828037
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+evict.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.540828018
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+memtest.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:08.535657792
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../deps/linenoise/linenoise.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.378726141
+#  File has been updated.
+#  Successfully updated.
+
+ae.o: ae.c .make-prerequisites ae.c ae.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h config.h ae_epoll.c ae.c ae.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h config.h ae_epoll.c ae.c ae.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h config.h ae_epoll.c ae.c ae.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h config.h ae_epoll.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'ae'
+#  Last modified 2022-07-19 17:33:19.879346427
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+crcspeed.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:08.663660695
+#  File has been updated.
+#  Successfully updated.
+
+32bit:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 372):
+	@echo ""
+	@echo "WARNING: if it fails under Linux you probably need to install libc6-dev-i386"
+	@echo ""
+	$(MAKE) CFLAGS="-m32" LDFLAGS="-m32"
+
+# Not a target:
+server.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:38:55.675362793
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+rax_malloc.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.434725129
+#  File has been updated.
+#  Successfully updated.
+
+lolwut.o: lolwut.c .make-prerequisites lolwut.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h lolwut.h lolwut.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h lolwut.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lolwut'
+#  Last modified 2022-07-19 17:39:16.37983453
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+expire.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:13.963780353
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+timeout.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.454724769
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+listpack.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+debugmacro.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.540828018
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+latency.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+redis-sentinel: redis-server
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-19 17:41:41.022702523
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 306):
+	$(REDIS_INSTALL) $(REDIS_SERVER_NAME) $(REDIS_SENTINEL_NAME)
+
+lcov:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 357):
+	$(MAKE) gcov
+	@(set -e; cd ..; ./runtest --clients 1)
+	@geninfo -o redis.info .
+	@genhtml --legend -o lcov-html redis.info
+
+geohash.o: geohash.c .make-prerequisites geohash.c geohash.h geohash.c geohash.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'geohash'
+#  Last modified 2022-07-19 17:39:14.075782869
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+ziplist.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.59682795
+#  File has been updated.
+#  Successfully updated.
+
+ 
+# Not a target:
+sds.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.576827974
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+dict.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:40:52.349814768
+#  File has been updated.
+#  Successfully updated.
+
+ae_select.o: ae_select.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+zmalloc.o: zmalloc.c .make-prerequisites zmalloc.c config.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h atomicvar.h zmalloc.c config.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h atomicvar.h zmalloc.c config.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h atomicvar.h zmalloc.c config.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h atomicvar.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'zmalloc'
+#  Last modified 2022-07-19 17:38:56.263376427
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+redis-check-rdb.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.564827989
+#  File has been updated.
+#  Successfully updated.
+
+object.o: object.c .make-prerequisites object.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h object.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'object'
+#  Last modified 2022-07-19 17:38:58.819435525
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+zipmap.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:38:56.643385229
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+rio.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.572827979
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+t_string.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.58882796
+#  File has been updated.
+#  Successfully updated.
+
+valgrind:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 384):
+	$(MAKE) OPTIMIZATION="-O0" MALLOC="libc"
+
+multi.o: multi.c .make-prerequisites multi.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h multi.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'multi'
+#  Last modified 2022-07-19 17:39:04.787572496
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+distclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 343):
+	-(cd ../deps && $(MAKE) distclean)
+	-(rm -f .make-*)
+
+# Not a target:
+sentinel.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.576827974
+#  File has been updated.
+#  Successfully updated.
+
+ae_epoll.o: ae_epoll.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+t_stream.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.58882796
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+gopher.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+redisassert.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.568827984
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+acl.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.516828047
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+redis-benchmark.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:40:35.585491774
+#  File has been updated.
+#  Successfully updated.
+
+lzf_d.o: lzf_d.c .make-prerequisites lzf_d.c lzfP.h lzf_d.c lzfP.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lzf_d'
+#  Last modified 2022-07-19 17:38:56.415379947
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+hyperloglog.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+mt19937-64.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:18.207875376
+#  File has been updated.
+#  Successfully updated.
+
+redis-check-aof: redis-server
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-19 17:41:41.302707422
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 314):
+	$(REDIS_INSTALL) $(REDIS_SERVER_NAME) $(REDIS_CHECK_AOF_NAME)
+
+# Not a target:
+connection.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.536828023
+#  File has been updated.
+#  Successfully updated.
+
+Makefile.dep:
+#  Implicit rule search has not been done.
+#  Last modified 2022-08-18 19:34:53.622274455
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 262):
+	-$(REDIS_CC) -MM *.c > Makefile.dep 2> /dev/null || true
+
+# Not a target:
+atomicvar.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.524828037
+#  File has been updated.
+#  Successfully updated.
+
+redis-check-aof.o: redis-check-aof.c .make-prerequisites redis-check-aof.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h redis-check-aof.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'redis-check-aof'
+#  Last modified 2022-07-19 17:39:11.579726662
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+adlist.o: adlist.c .make-prerequisites adlist.c adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h adlist.c adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h adlist.c adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h adlist.c adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'adlist'
+#  Last modified 2022-07-19 17:33:19.279346864
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+connhelpers.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.536828023
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+notify.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.556827999
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+blocked.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.524828037
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+gopher.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:17.371856711
+#  File has been updated.
+#  Successfully updated.
+
+sha1.o: sha1.c .make-prerequisites sha1.c solarisfixes.h sha1.h config.h sha1.c solarisfixes.h sha1.h config.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'sha1'
+#  Last modified 2022-07-19 17:38:56.819389306
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+rio.o: rio.c .make-prerequisites rio.c fmacros.h rio.h sds.h connection.h util.h crc64.h config.h server.h solarisfixes.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h stream.h listpack.h rdb.h rio.c fmacros.h rio.h sds.h connection.h util.h crc64.h config.h server.h solarisfixes.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'rio'
+#  Last modified 2022-07-19 17:39:08.36365389
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+intset.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+sds.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.572827979
+#  File has been updated.
+#  Successfully updated.
+
+ 
+# Not a target:
+endianconv.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.540828018
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+localtime.o: localtime.c .make-prerequisites localtime.c localtime.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'localtime'
+#  Last modified 2022-07-19 17:39:16.235831307
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+redis-check-rdb.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:11.415722961
+#  File has been updated.
+#  Successfully updated.
+
+uninstall:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 402):
+	rm -f $(INSTALL_BIN)/{$(REDIS_SERVER_NAME),$(REDIS_BENCHMARK_NAME),$(REDIS_CLI_NAME),$(REDIS_CHECK_RDB_NAME),$(REDIS_CHECK_AOF_NAME),$(REDIS_SENTINEL_NAME)}
+
+# Not a target:
+sdsalloc.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.576827974
+#  File has been updated.
+#  Successfully updated.
+
+.make-prerequisites:
+#  Implicit rule search has not been done.
+#  Last modified 2022-04-06 20:19:25.542079899
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 289):
+	@touch $@
+
+# Not a target:
+t_hash.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:03.207536371
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.516828047
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+geohash_helper.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+t_zset.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.58882796
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+util.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.59682795
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+quicklist.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:33:19.667346582
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+rax.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:15.283809979
+#  File has been updated.
+#  Successfully updated.
+
+defrag.o: defrag.c .make-prerequisites defrag.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h defrag.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'defrag'
+#  Last modified 2022-07-19 17:39:14.631795353
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+notify.o: notify.c .make-prerequisites notify.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h notify.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'notify'
+#  Last modified 2022-07-19 17:39:10.21569585
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+../deps/jemalloc/include/jemalloc/jemalloc.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:18:51.733963976
+#  File has been updated.
+#  Successfully updated.
+
+helgrind:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 387):
+	$(MAKE) OPTIMIZATION="-O0" MALLOC="libc" CFLAGS="-D__ATOMIC_VAR_FORCE_SYNC_MACROS"
+
+# Not a target:
+release.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:41:40.674696426
+#  File has been updated.
+#  Successfully updated.
+
+server.o: server.c .make-prerequisites server.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h cluster.h slowlog.h bio.h atomicvar.h asciilogo.h server.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h cluster.h slowlog.h bio.h atomicvar.h asciilogo.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'server'
+#  Last modified 2022-07-19 17:38:55.723363908
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+networking.o: networking.c .make-prerequisites networking.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h atomicvar.h cluster.h networking.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h atomicvar.h cluster.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'networking'
+#  Last modified 2022-07-19 17:38:58.10741909
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+listpack.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+latency.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+debug.o: debug.c .make-prerequisites debug.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h bio.h debug.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h bio.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'debug'
+#  Last modified 2022-07-19 17:39:05.263583359
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+ziplist.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.59682795
+#  File has been updated.
+#  Successfully updated.
+
+sort.o: sort.c .make-prerequisites sort.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h pqsort.h sort.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h pqsort.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'sort'
+#  Last modified 2022-07-19 17:39:05.503588832
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+test: redis-server redis-check-aof
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 349):
+	@(cd ..; ./runtest)
+
+# Not a target:
+lzfP.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.548828008
+#  File has been updated.
+#  Successfully updated.
+
+geo.o: geo.c .make-prerequisites geo.c geo.h server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h geohash_helper.h geohash.h debugmacro.h geo.c geo.h server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h geohash_helper.h geohash.h debugmacro.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'geo'
+#  Last modified 2022-07-19 17:39:11.855732891
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+../deps/hiredis/async.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.460828115
+#  File has been updated.
+#  Successfully updated.
+
+t_zset.o: t_zset.c .make-prerequisites t_zset.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h t_zset.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 't_zset'
+#  Last modified 2022-07-19 17:39:02.911529593
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+module.o: module.c .make-prerequisites module.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h cluster.h module.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h cluster.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'module'
+#  Last modified 2022-07-19 17:39:13.579771716
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+scripting.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.572827979
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lazyfree.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:11.995736051
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lazyfree.c:
+ 
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../deps/lua/src/lua.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.386725997
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+crc16.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:07.119625635
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+slowlog.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.584827965
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lzf.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.548828008
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+redis-cli.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:21.411946653
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+t_set.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.58882796
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+connection.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.536828023
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+geohash_helper.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:14.171785025
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+listpack_malloc.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+aof.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.520828042
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+sds.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:38:56.111372907
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+rand.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.434725129
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+intset.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+crc16_slottable.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.414725492
+#  File has been updated.
+#  Successfully updated.
+
+lolwut6.o: lolwut6.c .make-prerequisites lolwut6.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h lolwut.h lolwut6.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h lolwut.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lolwut6'
+#  Last modified 2022-07-19 17:39:16.647840526
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+redis-cli: anet.o adlist.o dict.o redis-cli.o zmalloc.o release.o ae.o crcspeed.o crc64.o siphash.o crc16.o mt19937-64.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-19 17:41:41.266706791
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 318):
+	$(REDIS_LD) -o $@ $^ ../deps/hiredis/libhiredis.a ../deps/linenoise/linenoise.o $(FINAL_LIBS)
+
+crc64.o: crc64.c .make-prerequisites crc64.c crc64.h crcspeed.h crc64.c crc64.h crcspeed.h crc64.c crc64.h crcspeed.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'crc64'
+#  Last modified 2022-07-19 17:39:08.719661967
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+test-sentinel: redis-sentinel
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 352):
+	@(cd ..; ./runtest-sentinel)
+
+# Not a target:
+replication.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.572827979
+#  File has been updated.
+#  Successfully updated.
+
+childinfo.o: childinfo.c .make-prerequisites childinfo.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h childinfo.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'childinfo'
+#  Last modified 2022-07-19 17:39:14.27978745
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+siphash.o: siphash.c .make-prerequisites siphash.c siphash.c siphash.c siphash.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'siphash'
+#  Last modified 2022-07-19 17:39:14.711797148
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+pqsort.o: pqsort.c .make-prerequisites pqsort.c pqsort.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'pqsort'
+#  Last modified 2022-07-19 17:38:56.535382727
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+memtest.o: memtest.c .make-prerequisites memtest.c config.h memtest.c config.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'memtest'
+#  Last modified 2022-07-19 17:39:08.547658065
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+util.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.59682795
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+t_list.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:01.563498676
+#  File has been updated.
+#  Successfully updated.
+
+rdb.o: rdb.c .make-prerequisites rdb.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h lzf.h rdb.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h lzf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'rdb'
+#  Last modified 2022-07-19 17:39:00.955484714
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+setcpuaffinity.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.446724913
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+multi.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:04.77157213
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+bitops.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:09.063669769
+#  File has been updated.
+#  Successfully updated.
+
+dict-benchmark: dict.c zmalloc.c sds.c siphash.c mt19937-64.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 325):
+	$(REDIS_CC) $(FINAL_CFLAGS) $^ -D DICT_BENCHMARK_MAIN -o $@ $(FINAL_LIBS)
+
+expire.o: expire.c .make-prerequisites expire.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h expire.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'expire'
+#  Last modified 2022-07-19 17:39:13.979780712
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+bio.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.524828037
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+zipmap.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.59682795
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+anet.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.520828042
+#  File has been updated.
+#  Successfully updated.
+
+replication.o: replication.c .make-prerequisites replication.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h cluster.h bio.h replication.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h cluster.h bio.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'replication'
+#  Last modified 2022-07-19 17:39:00.031463459
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+ 
+# Not a target:
+endianconv.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:07.151626361
+#  File has been updated.
+#  Successfully updated.
+
+dict.o: dict.c .make-prerequisites dict.c fmacros.h dict.h mt19937-64.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h redisassert.h dict.c fmacros.h dict.h mt19937-64.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h redisassert.h dict.c fmacros.h dict.h mt19937-64.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h redisassert.h dict.c fmacros.h dict.h mt19937-64.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h redisassert.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'dict'
+#  Last modified 2022-07-19 17:40:52.365815071
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+ae.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.516828047
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lolwut5.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:16.499837214
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+evict.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:13.767775945
+#  File has been updated.
+#  Successfully updated.
+
+db.o: db.c .make-prerequisites db.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h cluster.h atomicvar.h db.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h cluster.h atomicvar.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'db'
+#  Last modified 2022-07-19 17:38:59.355447883
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+tracking.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:17.579861357
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../deps/hiredis/sds.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.468828105
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lolwut.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+redis-benchmark: ae.o anet.o redis-benchmark.o adlist.o dict.o zmalloc.o siphash.o mt19937-64.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-19 17:40:53.281832458
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 322):
+	$(REDIS_LD) -o $@ $^ ../deps/hiredis/libhiredis.a $(FINAL_LIBS)
+
+crcspeed.o: crcspeed.c .make-prerequisites crcspeed.c crcspeed.h crcspeed.c crcspeed.h crcspeed.c crcspeed.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'crcspeed'
+#  Last modified 2022-07-19 17:39:08.671660878
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+redis-benchmark.o: redis-benchmark.c .make-prerequisites redis-benchmark.c fmacros.h ../deps/hiredis/sds.h ae.h ../deps/hiredis/hiredis.h ../deps/hiredis/read.h ../deps/hiredis/sds.h adlist.h dict.h mt19937-64.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h atomicvar.h crc16_slottable.h redis-benchmark.c fmacros.h ../deps/hiredis/sds.h ae.h ../deps/hiredis/hiredis.h ../deps/hiredis/read.h ../deps/hiredis/sds.h adlist.h dict.h mt19937-64.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h atomicvar.h crc16_slottable.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'redis-benchmark'
+#  Last modified 2022-07-19 17:40:35.641492869
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+mt19937-64.o: mt19937-64.c .make-prerequisites mt19937-64.c mt19937-64.h mt19937-64.c mt19937-64.h mt19937-64.c mt19937-64.h mt19937-64.c mt19937-64.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'mt19937-64'
+#  Last modified 2022-07-19 17:39:18.215875554
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+zipmap.o: zipmap.c .make-prerequisites zipmap.c zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h endianconv.h config.h zipmap.c zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h endianconv.h config.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'zipmap'
+#  Last modified 2022-07-19 17:38:56.651385414
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+timeout.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:18.055871987
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ziplist.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:38:57.067395048
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+listpack.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:16.183830144
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+latency.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:11.119716281
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+connection.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:17.751865199
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ae_select.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+zmalloc.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.59682795
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+object.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.556827999
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+db.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:38:59.327447238
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+rand.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.434725129
+#  File has been updated.
+#  Successfully updated.
+
+redis-check-rdb: redis-server
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-19 17:41:41.286707142
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 310):
+	$(REDIS_INSTALL) $(REDIS_SERVER_NAME) $(REDIS_CHECK_RDB_NAME)
+
+# Not a target:
+multi.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.552828003
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ae_epoll.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.516828047
+#  File has been updated.
+#  Successfully updated.
+
+redis-check-rdb.o: redis-check-rdb.c .make-prerequisites redis-check-rdb.c mt19937-64.h server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h redis-check-rdb.c mt19937-64.h server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'redis-check-rdb'
+#  Last modified 2022-07-19 17:39:11.431723323
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+t_string.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:01.251491512
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.make-settings:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:18:35.225908601
+#  File has been updated.
+#  Successfully updated.
+
+slowlog.o: slowlog.c .make-prerequisites slowlog.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h slowlog.h slowlog.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h slowlog.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'slowlog'
+#  Last modified 2022-07-19 17:39:07.295629633
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+cluster.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.532828028
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+sentinel.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:10.055692233
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lzf_d.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.548828008
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+slowlog.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:07.283629361
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+t_stream.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:15.983825668
+#  File has been updated.
+#  Successfully updated.
+
+t_hash.o: t_hash.c .make-prerequisites t_hash.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h t_hash.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+ 
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 't_hash'
+#  Last modified 2022-07-19 17:39:03.227536829
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+acl.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:17.239853763
+#  File has been updated.
+#  Successfully updated.
+
+quicklist.o: quicklist.c .make-prerequisites quicklist.c redisassert.h quicklist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h ziplist.h util.h sds.h lzf.h quicklist.c redisassert.h quicklist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h ziplist.h util.h sds.h lzf.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'quicklist'
+#  Last modified 2022-07-19 17:33:19.687346567
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+hyperloglog.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:10.895711222
+#  File has been updated.
+#  Successfully updated.
+
+rax.o: rax.c .make-prerequisites rax.c rax.h rax_malloc.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h rax.c rax.h rax_malloc.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'rax'
+#  Last modified 2022-07-19 17:39:15.311810607
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+gopher.o: gopher.c .make-prerequisites gopher.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h gopher.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'gopher'
+#  Last modified 2022-07-19 17:39:17.379856889
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+pubsub.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.556827999
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+adlist.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.516828047
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+pubsub.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:04.599568201
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+release.o: release.c .make-prerequisites release.c release.h version.h crc64.h release.c release.h version.h crc64.h release.c release.h version.h crc64.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'release'
+#  Last modified 2022-07-19 17:41:40.682696566
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+sha1.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.584827965
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+tls.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.59682795
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+config.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.536828023
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+sparkline.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.446724913
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+blocked.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:10.471701637
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+setproctitle.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.446724913
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+localtime.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+stream.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.584827965
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+intset.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:05.599591021
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+anet.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.520828042
+#  File has been updated.
+#  Successfully updated.
+
+redis-server: adlist.o quicklist.o ae.o anet.o dict.o server.o sds.o zmalloc.o lzf_c.o lzf_d.o pqsort.o zipmap.o sha1.o ziplist.o release.o networking.o util.o object.o db.o replication.o rdb.o t_string.o t_list.o t_set.o t_zset.o t_hash.o config.o aof.o pubsub.o multi.o debug.o sort.o intset.o syncio.o cluster.o crc16.o endianconv.o slowlog.o scripting.o bio.o rio.o rand.o memtest.o crcspeed.o crc64.o bitops.o sentinel.o notify.o setproctitle.o blocked.o hyperloglog.o latency.o sparkline.o redis-check-rdb.o redis-check-aof.o geo.o lazyfree.o module.o evict.o expire.o geohash.o geohash_helper.o childinfo.o defrag.o siphash.o rax.o t_stream.o listpack.o localtime.o lolwut.o lolwut5.o lolwut6.o acl.o gopher.o tracking.o connection.o tls.o sha256.o timeout.o setcpuaffinity.o mt19937-64.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-19 17:41:40.998702103
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 302):
+	$(REDIS_LD) -o $@ $^ ../deps/hiredis/libhiredis.a ../deps/lua/src/liblua.a $(FINAL_LIBS)
+
+# Not a target:
+rdb.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.560827994
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ae.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.516828047
+#  File has been updated.
+#  Successfully updated.
+
+pubsub.o: pubsub.c .make-prerequisites pubsub.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h pubsub.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'pubsub'
+#  Last modified 2022-07-19 17:39:04.611568475
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+defrag.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.540828018
+#  File has been updated.
+#  Successfully updated.
+
+crc16.o: crc16.c .make-prerequisites crc16.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h crc16.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h crc16.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'crc16'
+#  Last modified 2022-07-19 17:39:07.127625816
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+util.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:38:58.34742463
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+redis-cli.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.568827984
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../deps/lua/src/lauxlib.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.382726069
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lolwut.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.426725274
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+server.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.580827969
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+networking.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-26 21:18:14.378944677
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+tls.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:17.835867075
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+debug.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.540828018
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+geohash_helper.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.540828018
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+sort.c:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-04-06 20:07:03.584827965
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+syncio.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.446724913
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+geo.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.540828018
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+syncio.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:05.699593301
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../deps/hiredis/hiredis.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.460828115
+#  File has been updated.
+#  Successfully updated.
+
+lazyfree.o: lazyfree.c .make-prerequisites lazyfree.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h bio.h atomicvar.h cluster.h lazyfree.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h bio.h atomicvar.h cluster.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lazyfree'
+#  Last modified 2022-07-19 17:39:12.011736412
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 337):
+	rm -rf $(REDIS_SERVER_NAME) $(REDIS_SENTINEL_NAME) $(REDIS_CLI_NAME) $(REDIS_BENCHMARK_NAME) $(REDIS_CHECK_RDB_NAME) $(REDIS_CHECK_AOF_NAME) *.o *.gcda *.gcno *.gcov redis.info lcov-html Makefile.dep dict-benchmark
+	rm -f $(DEP)
+
+# Not a target:
+zmalloc.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.59682795
+#  File has been updated.
+#  Successfully updated.
+
+sds.o: sds.c .make-prerequisites sds.c sds.h sdsalloc.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h sds.c sds.h sdsalloc.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'sds'
+#  Last modified 2022-07-19 17:38:56.135373463
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+module.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.552828003
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+redismodule.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.568827984
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ae_kqueue.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+redis-cli.o: redis-cli.c .make-prerequisites redis-cli.c fmacros.h version.h ../deps/hiredis/hiredis.h ../deps/hiredis/read.h ../deps/hiredis/sds.h ../deps/hiredis/sds.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h ../deps/linenoise/linenoise.h help.h anet.h ae.h redis-cli.c fmacros.h version.h ../deps/hiredis/hiredis.h ../deps/hiredis/read.h ../deps/hiredis/sds.h ../deps/hiredis/sds.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h ../deps/linenoise/linenoise.h help.h anet.h ae.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'redis-cli'
+#  Last modified 2022-07-19 17:39:21.511948871
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+scripting.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:08.003645723
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+cluster.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.532828028
+#  File has been updated.
+#  Successfully updated.
+
+geohash_helper.o: geohash_helper.c .make-prerequisites geohash_helper.c fmacros.h geohash_helper.h geohash.h debugmacro.h geohash_helper.c fmacros.h geohash_helper.h geohash.h debugmacro.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'geohash_helper'
+#  Last modified 2022-07-19 17:39:14.183785294
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+t_list.o: t_list.c .make-prerequisites t_list.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h t_list.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 't_list'
+#  Last modified 2022-07-19 17:39:01.587499228
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+lzf_c.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:38:56.327377909
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+t_set.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:01.931507126
+#  File has been updated.
+#  Successfully updated.
+
+bitops.o: bitops.c .make-prerequisites bitops.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h bitops.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'bitops'
+#  Last modified 2022-07-19 17:39:09.083670222
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+adlist.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.394725853
+#  File has been updated.
+#  Successfully updated.
+
+install: all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 393):
+	@mkdir -p $(INSTALL_BIN)
+	$(REDIS_INSTALL) $(REDIS_SERVER_NAME) $(INSTALL_BIN)
+	$(REDIS_INSTALL) $(REDIS_BENCHMARK_NAME) $(INSTALL_BIN)
+	$(REDIS_INSTALL) $(REDIS_CLI_NAME) $(INSTALL_BIN)
+	$(REDIS_INSTALL) $(REDIS_CHECK_RDB_NAME) $(INSTALL_BIN)
+	$(REDIS_INSTALL) $(REDIS_CHECK_AOF_NAME) $(INSTALL_BIN)
+	@ln -sf $(REDIS_SERVER_NAME) $(INSTALL_BIN)/$(REDIS_SENTINEL_NAME)
+
+# Not a target:
+sha1.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.584827965
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+sparkline.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.446724913
+#  File has been updated.
+#  Successfully updated.
+
+ae_evport.o: ae_evport.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lolwut6.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+aof.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:04.387563359
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+rand.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:08.395654617
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../deps/lua/src/lualib.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.386725997
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+tracking.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.59682795
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+crc64.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.536828023
+#  File has been updated.
+#  Successfully updated.
+
+endianconv.o: endianconv.c .make-prerequisites endianconv.c endianconv.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'endianconv'
+#  Last modified 2022-07-19 17:39:07.167626725
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+childinfo.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.524828037
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+siphash.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.584827965
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+pqsort.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.434725129
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+rdb.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.564827989
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+memtest.c:
+ 
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.548828008
+#  File has been updated.
+#  Successfully updated.
+
+lolwut5.o: lolwut5.c .make-prerequisites lolwut5.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h lolwut.h lolwut5.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h lolwut.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lolwut5'
+#  Last modified 2022-07-19 17:39:16.511837483
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+sha256.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:17.92386904
+#  File has been updated.
+#  Successfully updated.
+
+evict.o: evict.c .make-prerequisites evict.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h bio.h atomicvar.h evict.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h bio.h atomicvar.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'evict'
+#  Last modified 2022-07-19 17:39:13.787776394
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+tracking.o: tracking.c .make-prerequisites tracking.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h tracking.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'tracking'
+#  Last modified 2022-07-19 17:39:17.591861625
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+expire.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.540828018
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+server.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.580827969
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+setcpuaffinity.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:18.127873593
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+slowlog.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.584827965
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+sha256.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.584827965
+#  File has been updated.
+#  Successfully updated.
+
+timeout.o: timeout.c .make-prerequisites timeout.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h cluster.h timeout.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h cluster.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'timeout'
+#  Last modified 2022-07-19 17:39:18.071872343
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+listpack.o: listpack.c .make-prerequisites listpack.c listpack.h listpack_malloc.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h listpack.c listpack.h listpack_malloc.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'listpack'
+#  Last modified 2022-07-19 17:39:16.191830323
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+config.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:03.827550559
+#  File has been updated.
+#  Successfully updated.
+
+latency.o: latency.c .make-prerequisites latency.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h latency.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'latency'
+#  Last modified 2022-07-19 17:39:11.139716733
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+geo.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.422725346
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+dict.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:40:46.113695689
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+fmacros.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.422725346
+#  File has been updated.
+#  Successfully updated.
+
+ziplist.o: ziplist.c .make-prerequisites ziplist.c zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h util.h sds.h ziplist.h endianconv.h config.h redisassert.h ziplist.c zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h util.h sds.h ziplist.h endianconv.h config.h redisassert.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'ziplist'
+#  Last modified 2022-07-19 17:38:57.08739551
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+anet.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:33:20.103346264
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lolwut6.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:16.635840257
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+geohash.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:14.0637826
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+db.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.540828018
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ae.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:33:19.867346436
+#  File has been updated.
+#  Successfully updated.
+
+cluster.o: cluster.c .make-prerequisites cluster.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h cluster.h cluster.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h cluster.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'cluster'
+#  Last modified 2022-07-19 17:39:07.035623725
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+t_string.o: t_string.c .make-prerequisites t_string.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h t_string.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 't_string'
+#  Last modified 2022-07-19 17:39:01.271491972
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+crcspeed.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.536828023
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+redis-benchmark.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.564827989
+#  File has been updated.
+#  Successfully updated.
+
+gcov:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 378):
+	$(MAKE) REDIS_CFLAGS="-fprofile-arcs -ftest-coverage -DCOVERAGE_TEST" REDIS_LDFLAGS="-fprofile-arcs -ftest-coverage"
+
+sentinel.o: sentinel.c .make-prerequisites sentinel.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h ../deps/hiredis/hiredis.h ../deps/hiredis/read.h ../deps/hiredis/sds.h ../deps/hiredis/async.h ../deps/hiredis/hiredis.h sentinel.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h ../deps/hiredis/hiredis.h ../deps/hiredis/read.h ../deps/hiredis/sds.h ../deps/hiredis/async.h ../deps/hiredis/hiredis.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'sentinel'
+#  Last modified 2022-07-19 17:39:10.111693498
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+t_stream.o: t_stream.c .make-prerequisites t_stream.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h t_stream.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 't_stream'
+#  Last modified 2022-07-19 17:39:16.031826743
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+config.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.532828028
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+mt19937-64.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.434725129
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lolwut.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:16.367834262
+#  File has been updated.
+#  Successfully updated.
+
+acl.o: acl.c .make-prerequisites acl.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h sha256.h acl.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h sha256.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'acl'
+#  Last modified 2022-07-19 17:39:17.283854746
+#  File has been updated.
+ 
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+hyperloglog.o: hyperloglog.c .make-prerequisites hyperloglog.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h hyperloglog.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'hyperloglog'
+#  Last modified 2022-07-19 17:39:10.915711674
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+setproctitle.o: setproctitle.c .make-prerequisites setproctitle.c setproctitle.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'setproctitle'
+#  Last modified 2022-07-19 17:39:10.303697839
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+connection.o: connection.c .make-prerequisites connection.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h connhelpers.h connection.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h connhelpers.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'connection'
+#  Last modified 2022-07-19 17:39:17.763865467
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+bio.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:08.151649081
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+pqsort.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:38:56.527382541
+#  File has been updated.
+#  Successfully updated.
+
+check: test
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+zmalloc.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:38:56.251376149
+#  File has been updated.
+#  Successfully updated.
+
+blocked.o: blocked.c .make-prerequisites blocked.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h blocked.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'blocked'
+#  Last modified 2022-07-19 17:39:10.487701999
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+object.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:38:58.795434971
+#  File has been updated.
+#  Successfully updated.
+
+intset.o: intset.c .make-prerequisites intset.c intset.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h endianconv.h config.h redisassert.h intset.c intset.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h endianconv.h config.h redisassert.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'intset'
+#  Last modified 2022-07-19 17:39:05.607591203
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+crc64.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.536828023
+#  File has been updated.
+#  Successfully updated.
+
+sparkline.o: sparkline.c .make-prerequisites sparkline.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h sparkline.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'sparkline'
+#  Last modified 2022-07-19 17:39:11.271719712
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+config.o: config.c .make-prerequisites config.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h cluster.h config.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h cluster.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'config'
+#  Last modified 2022-07-19 17:39:03.863551383
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+t_hash.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.58882796
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+pqsort.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.434725129
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+rio.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:08.343653436
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+redis-check-aof.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.564827989
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+cluster.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:06.97162227
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+adlist.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:33:19.255346882
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+quicklist.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.560827994
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lzf_d.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:38:56.407379763
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+rax.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.560827994
+#  File has been updated.
+#  Successfully updated.
+
+util.o: util.c .make-prerequisites util.c fmacros.h util.h sds.h sha256.h util.c fmacros.h util.h sds.h sha256.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'util'
+#  Last modified 2022-07-19 17:38:58.363425
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+t_zset.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:02.867528585
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+release.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:41:40.594695024
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+redis-check-aof.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:11.563726302
+#  File has been updated.
+#  Successfully updated.
+
+persist-settings: distclean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 271):
+	echo STD=$(STD) >> .make-settings
+	echo WARN=$(WARN) >> .make-settings
+	echo OPT=$(OPT) >> .make-settings
+	echo MALLOC=$(MALLOC) >> .make-settings
+	echo BUILD_TLS=$(BUILD_TLS) >> .make-settings
+	echo USE_SYSTEMD=$(USE_SYSTEMD) >> .make-settings
+	echo CFLAGS=$(CFLAGS) >> .make-settings
+	echo LDFLAGS=$(LDFLAGS) >> .make-settings
+	echo REDIS_CFLAGS=$(REDIS_CFLAGS) >> .make-settings
+	echo REDIS_LDFLAGS=$(REDIS_LDFLAGS) >> .make-settings
+	echo PREV_FINAL_CFLAGS=$(FINAL_CFLAGS) >> .make-settings
+	echo PREV_FINAL_LDFLAGS=$(FINAL_LDFLAGS) >> .make-settings
+	-(cd ../deps && $(MAKE) $(DEPENDENCY_TARGETS))
+
+tls.o: tls.c .make-prerequisites tls.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h connhelpers.h tls.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h connhelpers.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'tls'
+#  Last modified 2022-07-19 17:39:17.851867432
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+geohash.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.540828018
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+help.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.544828013
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+sha1.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:38:56.81138912
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+sparkline.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:11.259719441
+#  File has been updated.
+#  Successfully updated.
+
+syncio.o: syncio.c .make-prerequisites syncio.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h syncio.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'syncio'
+#  Last modified 2022-07-19 17:39:05.707593485
+#  File has been updated.
+#  Successfully updated.
+ 
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+dict.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-06 20:07:03.540828018
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+localtime.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-19 17:39:16.227831129
+#  File has been updated.
+#  Successfully updated.
+
+noopt:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 381):
+	$(MAKE) OPTIMIZATION="-O0"
+
+# Not a target:
+../deps/lua/src/luaconf.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.386725997
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+solarisfixes.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.446724913
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+crc16.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.414725492
+#  File has been updated.
+#  Successfully updated.
+
+scripting.o: scripting.c .make-prerequisites scripting.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h rand.h cluster.h ../deps/lua/src/lauxlib.h ../deps/lua/src/lua.h ../deps/lua/src/lualib.h scripting.c server.h fmacros.h config.h solarisfixes.h rio.h sds.h connection.h ../deps/lua/src/lua.h ../deps/lua/src/luaconf.h ae.h dict.h mt19937-64.h adlist.h zmalloc.h ../deps/jemalloc/include/jemalloc/jemalloc.h anet.h ziplist.h intset.h version.h util.h latency.h sparkline.h quicklist.h rax.h redismodule.h zipmap.h sha1.h endianconv.h crc64.h stream.h listpack.h rdb.h rand.h cluster.h ../deps/lua/src/lauxlib.h ../deps/lua/src/lua.h ../deps/lua/src/lualib.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'scripting'
+#  Last modified 2022-07-19 17:39:08.043646631
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(REDIS_CC) -MMD -o $@ -c $<
+
+# Not a target:
+crcspeed.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.414725492
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=352/1024=34%, Rehash=0, Collisions=637/4821=13%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 454 / storage = 4499 B / avg = 9 B
+# current buf: size = 8162 B / used = 4499 B / count = 454 / avg = 9 B
+
+# strcache performance: lookups = 5319 / hit rate = 91%
+# hash-table stats:
+# Load=454/8192=6%, Rehash=0, Collisions=397/5319=7%
+# Finished Make data base on Thu Aug 18 19:34:55 2022
+
+# make[1]: Leaving directory '/home/mark/github/redis-6.0/src'
+# GNU Make 4.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2014 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Aug 18 19:34:55 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# default
+.SHELLFLAGS := -c
+# environment
+VSCODE_AGENT_FOLDER = /home/mark/.vscode-server
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# default
+MAKE_VERSION := 4.1
+# makefile
+CURDIR := /home/mark/github/redis-6.0
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"cc0490d1397af23dc5bf44a96fe15dbb.zh-cn","_translationsConfigFile":"/home/mark/.vscode-server/data/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/tcf.json","_cacheRoot":"/home/mark/.vscode-server/data/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn","_resolvedLanguagePackCoreLocation":"/home/mark/.vscode-server/data/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/e4503b30fc78200f846c62cf8091b76ff5547662","_corruptedFile":"/home/mark/.vscode-server/data/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/corrupted.info","_languagePackSupport":true}
+# environment
+_ = /home/mark/.vscode-server/bin/e4503b30fc78200f846c62cf8091b76ff5547662/node
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+VSCODE_CWD = /home/mark
+# environment
+SSH_CONNECTION = 192.168.31.13 23628 192.168.31.91 22
+# environment
+PATH = /home/mark/.vscode-server/bin/e4503b30fc78200f846c62cf8091b76ff5547662/bin/remote-cli:/usr/local/openresty/bin:/home/mark/.tiup/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+LS_COLORS = 
+# automatic
+%F = $(notdir $%)
+# environment
+PWD = /home/mark/github/redis-6.0
+# environment
+VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-e54a2421-c2ca-4e57-9d2d-e5b6ffb7566a.sock
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/mark
+# environment
+LOGNAME = mark
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
++F = $(notdir $+)
+# environment
+ZSH = /home/mark/.oh-my-zsh
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# environment
+XDG_SESSION_ID = 219
+# environment
+USER = mark
+# makefile
+.DEFAULT_GOAL := default
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := make
+# environment
+OLDPWD = /home/mark
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_CLIENT = 192.168.31.13 23628 22
+# environment
+MAIL = /var/mail/mark
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+BROWSER = /home/mark/.vscode-server/bin/e4503b30fc78200f846c62cf8091b76ff5547662/bin/helpers/browser.sh
+# environment
+VSCODE_HANDLES_SIGPIPE = true
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+ 
+# default
+.RECIPEPREFIX := 
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+LANG = C
+# variable set hash-table stats:
+# Load=65/1024=6%, Rehash=0, Collisions=8/95=8%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 64768, inode 930368): 28 files, no impossibilities.
+
+# 28 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: ''
+#  Modification time never checked.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := all
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/14=14%
+#  recipe to execute (from 'Makefile', line 6):
+	cd src && $(MAKE) $@
+
+.PHONY: install
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 19:24:37.342726792
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 6):
+	cd src && $(MAKE) $@
+
+default: all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 6):
+	cd src && $(MAKE) $@
+
+install:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 9):
+	cd src && $(MAKE) $@
+
+# files hash-table stats:
+# Load=7/1024=1%, Rehash=0, Collisions=0/22=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 36 / storage = 331 B / avg = 9 B
+# current buf: size = 8162 B / used = 331 B / count = 36 / avg = 9 B
+
+# strcache performance: lookups = 48 / hit rate = 25%
+# hash-table stats:
+# Load=36/8192=0%, Rehash=0, Collisions=1/48=2%
+# Finished Make data base on Thu Aug 18 19:34:55 2022
+
+ 
